@@ -1,2 +1,18 @@
 server:
   port: 1122
+  datasource:
+    password: razdeepak
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/hrmsv1
+    username: root
+    hikari:
+      connectionTimeout: 30000
+      idleTimeout: 30000
+      leak-detection-threshold: 2100
+      maxLifetime: 2000000
+      maximumPoolSize: 20
+      minimumIdle: 1
+      poolName: SpringBootJPAHikariCP
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
